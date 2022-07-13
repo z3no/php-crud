@@ -20,8 +20,18 @@ We will use the MVC structure that is provided. We will end up with at least 4 m
 
 ***
 
+We'll divide the work as follows:
+- `Michael` will make everything for students
+- `Pablo` will make everything for campus
+- `Alex` will make everything for teacher
+- `Zeno` will make everything for group
+
+As a group we will set up everything for _**git**_ and make the _**database**_.
+
 ## TO DO
 
+### As a group
+***
 - [x] Set up our git
     - [x] Create a production branch
     - [x] Each of us creates their own branch to work
@@ -45,4 +55,9 @@ We will use the MVC structure that is provided. We will end up with at least 4 m
           - id
           - name
           - location
+- [ ] 
+- [ ] env file
+- [ ] Our database connection, Datasource class
 
+### Individually
+- [ ] Create our 
