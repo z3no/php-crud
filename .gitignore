@@ -6,12 +6,21 @@ bin-release/
 
 # Other files and folders
 .settings/
+node_modules/
+.idea/
+package-lock.json/
+.composer.jon
+.composer.lock
+vendor/
+.gitignore
+.env
 
 # Executables
 *.swf
 *.air
 *.ipa
 *.apk
+
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
