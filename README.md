@@ -55,9 +55,21 @@ As a group we will set up everything for _**git**_ and make the _**database**_.
           - id
           - name
           - location
-- [ ] 
+- [x] export with mysqldump
 - [ ] env file
 - [ ] Our database connection, Datasource class
 
 ### Individually
-- [ ] Create our 
+- [ ] MVC Model
+  - [ ] Create Model Class
+  - [ ] Create Controller
+  - [ ] Create View
+- [ ] Overview of all records of your entity in a table
+  - [ ] Each row has a button to edit or delete entity
+  - [ ] Page should have a `create new` button
+- [ ] Detailed overview of the selected entity
+  - [ ] include a button to delete this entity
+    - Edge case: A teacher cannot be removed if he is still assigned to a class
+    - Edge case: If you remove a class, make sure to remove the link between the students and the class.
+- [ ] Page to edit and existing entity
+- [ ] Page to create a new entity
