@@ -25,13 +25,24 @@ We will use the MVC structure that is provided. We will end up with at least 4 m
 - [x] Set up our git
     - [x] Create a production branch
     - [x] Each of us creates their own branch to work
-- [ ] Make our database
-    - [ ] Tables
-        - [ ] group_table
-          - 
-        - [ ] student_table
-          - 
-        - [ ] teacher_table
-          - 
-        - [ ] campus_table
-          - 
+- [x] Make our database
+    - [x] Tables
+        - [x] group_table
+          - id
+          - name
+          - teacher_id
+          - campus_id
+        - [x] student_table
+          - id
+          - name
+          - email
+          - group_id
+        - [x] teacher_table
+          - id
+          - name
+          - email
+        - [x] campus_table
+          - id
+          - name
+          - location
+
