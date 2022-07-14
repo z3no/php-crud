@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-include 'Views/include/header.php';
+require 'View/includes/header.php';
 ?>
 
 
@@ -11,5 +11,5 @@ include 'Views/include/header.php';
 
 
 <?php
-include 'Views/include/footer.php';
+require 'View/includes/footer.php';
 ?>

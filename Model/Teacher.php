@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 
 class Teacher extends Student
@@ -14,4 +14,5 @@ class Teacher extends Student
         parent::__construct($name, $email, $group, $assignedTeacher);
         $this->listOfStudents = $listOfStudents;
     }
+
 }

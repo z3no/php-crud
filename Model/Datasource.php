@@ -3,13 +3,14 @@
 class DataSource
 {
 
-    private function connect()
+    public function connect()
     {
 
         $servername = $_ENV['MySQL_DB_HOST'];
         $username = $_ENV['MySQL_DB_USER_NAME'];
         $password = $_ENV['MySQL_DB_PASSWORD'];
         $database = $_ENV['MySQL_DB_NAME'];
+
 
         try {
             $dsn = "mysql:host=" . $servername . ";dbname=" . $database . ";";

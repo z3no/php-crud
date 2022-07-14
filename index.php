@@ -9,12 +9,14 @@ $dotenv->load();
 
 //include all your model files here
 //require 'Model/User.php';
-require 'Model/DBLoader.php';
+require 'Model/Datasource.php';
+require 'Model/Student.php';
 
 
 
 //include all your controllers here
 require 'Controller/HomepageController.php';
+require 'Controller/TeacherController.php';
 //require 'Controller/InfoController.php';
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
@@ -24,6 +26,7 @@ $controller = new HomepageController();
 if(isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new InfoController();
 }
+
 
 
 $controller->render($_GET, $_POST);
