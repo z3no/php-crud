@@ -22,8 +22,6 @@ class DataSource
     }
 
     public function retrieveGroups() : array {
-        $dbConnect = $this->connect();
-
         $allGroupData = [];
 
         $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
@@ -31,7 +29,7 @@ class DataSource
                 JOIN teacher_table tt on gt.teacher_id = tt.id
                 JOIN campus_table ct on gt.campus_id = ct.id
                 ORDER BY gt.id";
-        $stmt = $dbConnect->query($sql);
+        $stmt = $this->connect()->query($sql);
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $group = new Group($row);
             array_push($allGroupData, $group);
