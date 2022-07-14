@@ -26,7 +26,11 @@ class DataSource
 
         $allGroupData = [];
 
-        $sql = "SELECT * FROM group_table";
+        $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
+                FROM group_table gt
+                JOIN teacher_table tt on gt.teacher_id = tt.id
+                JOIN campus_table ct on gt.campus_id = ct.id
+                ORDER BY gt.id";
         $stmt = $dbConnect->query($sql);
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $group = new Group($row);
