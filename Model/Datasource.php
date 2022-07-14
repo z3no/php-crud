@@ -34,14 +34,14 @@ class DataSource
         }
         return $allCampusNames;
 
-
     }
-    public function getTeachers() : array{
+
+    /*public function getTeachers() : array{
         $sql = "SELECT * FROM teacher_table";
         $stmt = $this->connect()->query($sql);
 
         $result = $stmt->fetch();
         return $result;
-    }
+    }*/
 
 }
