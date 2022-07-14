@@ -1,18 +1,42 @@
 <?php
 
+class Teacher {
+    private int $id;
+    private string $name;
+    private string $email;
 
 
-class Teacher extends Student
-{
-    private string $listOfStudents;
+    public function __construct(array $teacherDataRow)
+    {
+        $this->id = $teacherDataRow['id'];
+        $this->name = $teacherDataRow['name'];
+        $this->email = $teacherDataRow['email'];
+
+    }
 
     /**
-     * @param string $listOfStudents
+     * @return int|mixed
      */
-    public function __construct(string $name, string $email, string $group, string $assignedTeacher, string $listOfStudents)
+    public function getId()
     {
-        parent::__construct($name, $email, $group, $assignedTeacher);
-        $this->listOfStudents = $listOfStudents;
+        return $this->id;
     }
+
+    /**
+     * @return mixed|string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
 
 }

@@ -11,5 +11,6 @@ require 'View/includes/header.php';
 
 
 <?php
+require 'View/teachers.php';
 require 'View/includes/footer.php';
 ?>

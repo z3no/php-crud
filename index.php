@@ -11,6 +11,7 @@ $dotenv->load();
 //require 'Model/User.php';
 require 'Model/Datasource.php';
 require 'Model/Student.php';
+require 'Model/Teacher.php';
 
 
 

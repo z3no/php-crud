@@ -21,4 +21,22 @@ class DataSource
             echo "Connection failed: " . $e->getMessage();
         }
     }
+
+    public function collectAllTeachers()
+    {
+
+        $dbh = $this->connect();
+
+        $allTeachers = [];
+
+        $sql = "SELECT * FROM teacher_table";
+        $query = $dbh->query($sql);
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+            $teacher = new Teacher($row, []);
+            $allTeachers[] = $teacher;
+        }
+
+        return $allTeachers;
+    }
 }
+

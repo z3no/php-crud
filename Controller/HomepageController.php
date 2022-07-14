@@ -9,6 +9,12 @@ class HomepageController
 
         $dataSource = new DataSource();
         $Dbc = $dataSource ->connect();
+        $test = $dataSource->collectAllTeachers();
+//        var_dump($test);
+
+
+
+
 
         // you should not echo anything inside your controller - only assign vars here
 

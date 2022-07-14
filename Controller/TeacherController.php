@@ -2,9 +2,11 @@
 declare(strict_types=1);
 
 
-class TeacherController
-{
+class TeacherController {
+
+
 
 }
+
 
 
