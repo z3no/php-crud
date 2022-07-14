@@ -9,8 +9,8 @@ bin-release/
 node_modules/
 .idea/
 package-lock.json/
-.composer.jon
-.composer.lock
+composer.json
+composer.lock
 vendor/
 .gitignore
 .env
