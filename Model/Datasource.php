@@ -22,9 +22,26 @@ class DataSource
     }
 
     public function retrieveGroups() : array {
+        $dbConnect = $this->connect();
+
+        $allGroupData = [];
+
         $sql = "SELECT * FROM group_table";
-        $stmt = $this->connect()->query($sql);
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
+        $stmt = $dbConnect->query($sql);
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $group = new Group($row, []);
+            array_push($allGroupData, $group);
+        }
+
+        return $allGroupData;
     }
+
+    /*
+    public function retrieveGroupNames() : array {
+        $sql = "SELECT name FROM group_table";
+        $stmt = $this->connect()->query($sql);
+        $names = $stmt->fetchAll();
+        return $names;
+    }
+    */
 }
