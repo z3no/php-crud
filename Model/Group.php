@@ -7,7 +7,9 @@ class Group
     private int $id;
     private string $name;
     private int $teacherID;
+    private string $teacherName;
     private int $campusID;
+    private string $campusName;
 
     /**
      * @param int $id
@@ -20,71 +22,105 @@ class Group
         $this->id = $groupDataRow['id'];
         $this->name = $groupDataRow['name'];
         $this->teacherID = $groupDataRow['teacher_id'];
+        $this->teacherName = $groupDataRow['teacher_name'];
         $this->campusID = $groupDataRow['campus_id'];
+        $this->campusName = $groupDataRow['campus_name'];
     }
 
     /**
-     * @return int
+     * @return int|mixed
      */
-    public function getId(): int
+    public function getId(): mixed
     {
         return $this->id;
     }
 
     /**
-     * @param int $id
+     * @param int|mixed $id
      */
-    public function setId(int $id): void
+    public function setId(mixed $id): void
     {
         $this->id = $id;
     }
 
     /**
-     * @return string
+     * @return mixed|string
      */
-    public function getName(): string
+    public function getName(): mixed
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param mixed|string $name
      */
-    public function setName(string $name): void
+    public function setName(mixed $name): void
     {
         $this->name = $name;
     }
 
     /**
-     * @return int
+     * @return int|mixed
      */
-    public function getTeacherID(): int
+    public function getTeacherID(): mixed
     {
         return $this->teacherID;
     }
 
     /**
-     * @param int $teacherID
+     * @param int|mixed $teacherID
      */
-    public function setTeacherID(int $teacherID): void
+    public function setTeacherID(mixed $teacherID): void
     {
         $this->teacherID = $teacherID;
     }
 
     /**
-     * @return int
+     * @return mixed|string
      */
-    public function getCampusID(): int
+    public function getTeacherName(): mixed
+    {
+        return $this->teacherName;
+    }
+
+    /**
+     * @param mixed|string $teacherName
+     */
+    public function setTeacherName(mixed $teacherName): void
+    {
+        $this->teacherName = $teacherName;
+    }
+
+    /**
+     * @return int|mixed
+     */
+    public function getCampusID(): mixed
     {
         return $this->campusID;
     }
 
     /**
-     * @param int $campusID
+     * @param int|mixed $campusID
      */
-    public function setCampusID(int $campusID): void
+    public function setCampusID(mixed $campusID): void
     {
         $this->campusID = $campusID;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getCampusName(): mixed
+    {
+        return $this->campusName;
+    }
+
+    /**
+     * @param mixed|string $campusName
+     */
+    public function setCampusName(mixed $campusName): void
+    {
+        $this->campusName = $campusName;
     }
 
 }
