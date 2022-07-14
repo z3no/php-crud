@@ -10,8 +10,8 @@ require 'View/includes/header.php';
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Teacher ID</th>
-                <th>Campus ID</th>
+                <th>Teacher</th>
+                <th>Campus</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +19,8 @@ require 'View/includes/header.php';
             <tr>
                 <td><?php echo $data->getId(); ?></td>
                 <td><?php echo $data->getName(); ?></td>
-                <td><?php echo $data->getTeacherID(); ?></td>
-                <td><?php echo $data->getCampusID(); ?></td>
+                <td><?php echo $data->getTeacherName(); ?></td>
+                <td><?php echo $data->getCampusName(); ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
