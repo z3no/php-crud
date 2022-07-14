@@ -26,27 +26,11 @@ class Student
     }
 
     /**
-     * @param int|mixed $id
-     */
-    public function setId(mixed $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @return mixed|string
      */
     public function getName(): mixed
     {
         return $this->name;
-    }
-
-    /**
-     * @param mixed|string $name
-     */
-    public function setName(mixed $name): void
-    {
-        $this->name = $name;
     }
 
     /**
@@ -58,44 +42,13 @@ class Student
     }
 
     /**
-     * @param mixed|string $email
-     */
-    public function setEmail(mixed $email): void
-    {
-        $this->email = $email;
-    }
-
-    /**
      * @return mixed|string
      */
-    public function getGroup(): mixed
+    public function getGroupId(): mixed
     {
-        return $this->group;
+        return $this->group_id;
     }
 
-    /**
-     * @param mixed|string $group
-     */
-    public function setGroup(mixed $group): void
-    {
-        $this->group = $group;
-    }
-
-    /**
-     * @return mixed|string
-     */
-    public function getAssignedTeacher(): mixed
-    {
-        return $this->assignedTeacher;
-    }
-
-    /**
-     * @param mixed|string $assignedTeacher
-     */
-    public function setAssignedTeacher(mixed $assignedTeacher): void
-    {
-        $this->assignedTeacher = $assignedTeacher;
-    }
 }
 
 
