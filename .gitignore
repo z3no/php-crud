@@ -7,10 +7,11 @@ bin-release/
 # Other files and folders
 .settings/
 node_modules/
-.idea/
+idea/
+.idea
 package-lock.json/
-.composer.jon
-.composer.lock
+composer.json
+composer.lock
 vendor/
 .gitignore
 .env

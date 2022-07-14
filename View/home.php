@@ -1,15 +1,17 @@
 <?php
 declare(strict_types=1);
-include 'Views/include/header.php';
+include 'View/includes/header.php';
 ?>
 
 
 //put View divs inside here to show the homepage
+<div>
 
+</div>
 
 
 
 
 <?php
-include 'Views/include/footer.php';
+include 'View/includes/footer.php';
 ?>

@@ -1,10 +1,17 @@
 <?php
 
-class HomeController {
+class HomepageController {
 
-    public function render($GET, $POST){
+    public function render($POST){
 
-        $dataSource = new DataSource();
+        $dataSource = new Datasource();
+        $dataSource->connect();
+        $studentsName = $dataSource->retrieveAllStudents();
+        //$test = $dataSource->retrieveAllCustomerNames();
+        //var_dump($test);
+
+        var_dump($studentsName);
+
 
         if(isset($POST['submit'])){
 
@@ -16,7 +23,7 @@ class HomeController {
 
         }
 
-        require 'View/home.php';
+        require 'View/studentview.php';
 
     }
 }
