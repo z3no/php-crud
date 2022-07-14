@@ -1,19 +1,26 @@
 <?php
 declare(strict_types=1);
 
+require_once realpath(__DIR__ . "/vendor/autoload.php");
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 //include all your model files here
-require 'Model/User.php';
+require 'Model/Datasource.php';
+require 'Model/Campus.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
-require 'Controller/InfoController.php';
+require 'Controller/CampusController.php';
+
+
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
 
-$controller = new HomepageController();
-if(isset($_GET['page']) && $_GET['page'] === 'info') {
-    $controller = new InfoController();
+$controller = new HomeController();
+if(isset($_GET['page']) && $_GET['page'] === 'campus') {
+    $controller = new CampusController();
 }
-
 
 $controller->render($_GET, $_POST);
