@@ -4,7 +4,7 @@ class HomeController {
 
     public function render($GET, $POST){
 
-        $dataSource = new DataSource();
+
 
         if(isset($POST['submit'])){
 
