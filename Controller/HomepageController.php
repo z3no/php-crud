@@ -7,7 +7,7 @@ class HomepageController {
         $dataSource = new DataSource();
         $dataSource->connect();
         $groupData = $dataSource->retrieveGroups();
-        $row = $groupData;
+
 
 
         /*
