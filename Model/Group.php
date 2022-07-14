@@ -15,12 +15,12 @@ class Group
      * @param int $teacherID
      * @param int $campusID
      */
-    public function __construct(int $id, string $name, int $teacherID, int $campusID)
+    public function __construct(array $groupDataRow)
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->teacherID = $teacherID;
-        $this->campusID = $campusID;
+        $this->id = $groupDataRow['id'];
+        $this->name = $groupDataRow['name'];
+        $this->teacherID = $groupDataRow['teacher_id'];
+        $this->campusID = $groupDataRow['campus_id'];
     }
 
     /**
