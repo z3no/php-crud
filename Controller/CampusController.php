@@ -10,7 +10,8 @@ class CampusController
         $dbc = $dataSource ->connect();
 
         $showAllCampus = $dataSource->getCampus();
-        var_dump($showAllCampus);
+
+        //var_dump($showAllCampus);
         require 'View/campusview.php';
     }
 }
