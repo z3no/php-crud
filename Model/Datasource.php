@@ -3,7 +3,7 @@
 class DataSource
 {
 
-    private function connect()
+    public function connect()
     {
 
         $servername = $_ENV['MySQL_DB_HOST'];
@@ -19,5 +19,13 @@ class DataSource
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
+    }
+
+    public function getCampus() : array{
+        $sql = "SELECT id, name, location FROM campus_table";
+        $stmt = $this->connect()->query($sql);
+
+        $result = $stmt->fetchAll();
+        return $result;
     }
 }
