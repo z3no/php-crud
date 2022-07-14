@@ -15,9 +15,12 @@ require 'View/includes/header.php';
             </tr>
         </thead>
         <tbody>
-            <?php foreach($groupID as $id): ?>
+            <?php foreach($groupData as $data): ?>
             <tr>
-                <td><?php echo $id;?></td>
+                <td><?php echo $data->getId(); ?></td>
+                <td><?php echo $data->getName(); ?></td>
+                <td><?php echo $data->getTeacherID(); ?></td>
+                <td><?php echo $data->getCampusID(); ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
