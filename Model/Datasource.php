@@ -29,7 +29,7 @@ class DataSource
         $sql = "SELECT * FROM group_table";
         $stmt = $dbConnect->query($sql);
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            $group = new Group($row, []);
+            $group = new Group($row);
             array_push($allGroupData, $group);
         }
 
