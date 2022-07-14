@@ -2,55 +2,100 @@
 
 class Student
 {
+    private int $id;
     private string $name;
     private string $email;
-    private string $group;
-    private string $assignedTeacher;
+    private string $group_id;
 
-    /**
-     * @param string $name
-     * @param string $email
-     * @param string $group
-     * @param string $assignedTeacher
-     */
-    public function __construct(string $name, string $email, string $group, string $assignedTeacher)
+
+
+    public function __construct(array $studentDataRow)
     {
-        $this->name = $name;
-        $this->email = $email;
-        $this->group = $group;
-        $this->assignedTeacher = $assignedTeacher;
+        $this->id = $studentDataRow['id'];
+        $this->name = $studentDataRow['name'];
+        $this->email = $studentDataRow['email'];
+        $this->group_id = $studentDataRow['group_id'];
     }
 
     /**
-     * @return string
+     * @return int|mixed
      */
-    public function getName(): string
+    public function getId(): mixed
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int|mixed $id
+     */
+    public function setId(mixed $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getName(): mixed
     {
         return $this->name;
     }
 
     /**
-     * @return string
+     * @param mixed|string $name
      */
-    public function getEmail(): string
+    public function setName(mixed $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getEmail(): mixed
     {
         return $this->email;
     }
 
     /**
-     * @return string
+     * @param mixed|string $email
      */
-    public function getGroup(): string
+    public function setEmail(mixed $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getGroup(): mixed
     {
         return $this->group;
     }
 
     /**
-     * @return string
+     * @param mixed|string $group
      */
-    public function getAssignedTeacher(): string
+    public function setGroup(mixed $group): void
+    {
+        $this->group = $group;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getAssignedTeacher(): mixed
     {
         return $this->assignedTeacher;
     }
+
+    /**
+     * @param mixed|string $assignedTeacher
+     */
+    public function setAssignedTeacher(mixed $assignedTeacher): void
+    {
+        $this->assignedTeacher = $assignedTeacher;
+    }
 }
+
 

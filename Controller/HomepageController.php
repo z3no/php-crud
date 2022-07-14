@@ -7,10 +7,6 @@ class HomepageController {
         $dataSource = new Datasource();
         $dataSource->connect();
         $studentsName = $dataSource->retrieveAllStudents();
-        //$test = $dataSource->retrieveAllCustomerNames();
-        //var_dump($test);
-
-        var_dump($studentsName);
 
 
         if(isset($POST['submit'])){

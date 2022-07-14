@@ -23,10 +23,17 @@ class DataSource
 
     public function retrieveAllStudents(): bool|array
     {
+        $dbconnect = $this->connect();
+
+        $studentsArray = [];
+
         $sql = "SELECT * FROM student_table";
-        $stmt = $this->connect()->query($sql);
-        $result = $stmt->fetchAll();
-        return $result;
+        $stmt = $dbconnect->query($sql);
+        while($row =$stmt->fetch(PDO::FETCH_ASSOC)){
+        $student = new Student($row, []);
+        array_push($studentsArray, $student);}
+
+        return $studentsArray;
     }
 
     public function retrieveAllCustomerNames()

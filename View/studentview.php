@@ -10,16 +10,19 @@ declare(strict_types=1);
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
+        <th>Group_ID</th>
     </tr>
     </thead>
-
     <tbody>
-    <tr>
-        <?php foreach ($studentsName as $student){ ?>
-        <td> <?php echo $student['id']; ?></td>
-        <td> <?php echo $student['name']; ?></td>
-        <td> <?php echo $student['email']; ?></td>
-        <?php } ?>
-    </tr>
+    <?php foreach($studentsName as $student): ?>
+        <tr>
+            <td><?php echo $student->getId(); ?></td>
+            <td><?php echo $student->getName(); ?></td>
+        </tr>
+    <?php endforeach; ?>
     </tbody>
+
 </table>
+
+
+
