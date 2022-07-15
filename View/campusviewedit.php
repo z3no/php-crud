@@ -1,7 +1,7 @@
 <?php require'View/includes/headerCampus.php'?>
 
-<form action="index.php?page=campus">
-    <label for="cname"> Campus name:</label><br>
+<form action="index.php?page=campus" method="post">
+       <label for="cname"> Campus name:</label><br>
     <input type="text" id="cname" name="cname" value="John"><br>
     <label for="lname">Location name:</label><br>
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
