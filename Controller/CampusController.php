@@ -16,7 +16,6 @@ class CampusController
         }
 
         require 'View/campusview.php';
-        require 'View/campusviewedit.php';
     }
 }
 
