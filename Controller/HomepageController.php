@@ -7,16 +7,12 @@ class HomeController {
         $dataSource = new DataSource();
         $dbc = $dataSource ->connect();
 
-        $showAllTeachers = $dataSource->getTeachers();
+        //$showAllTeachers = $dataSource->getTeachers();
         //dump($showAllTeachers);
 
         if(isset($POST['submit'])){
 
 
-            if($POST['customerId'] !== 'Customer' && $POST['productId'] !== 'Product' && $POST['quantity'] !== 'Quantity'){
-
-
-            }
 
         }
 
