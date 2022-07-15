@@ -18,7 +18,9 @@ require 'Controller/EditGroupController.php';
 //this file should never be more than 20 lines of code!
 
 $controller = new HomepageController();
-if(isset($_GET['page']) && $_GET['page'] === 'groups') {
+if(isset($_GET['page']) && $_GET['page'] === 'home'){
+    $controller = new HomepageController();
+} elseif(isset($_GET['page']) && $_GET['page'] === 'groups') {
     $controller = new GroupController();
 } elseif (isset($_GET['page']) && $_GET['page'] === 'edit_group') {
     $controller = new EditGroupController();
