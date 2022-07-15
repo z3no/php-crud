@@ -9,10 +9,7 @@ class HomepageController
 
         $dataSource = new DataSource();
         $Dbc = $dataSource ->connect();
-        $test = $dataSource->collectAllTeachers();
-//        var_dump($test);
-
-
+        $allTeachers = $dataSource->collectAllTeachers();
 
 
 

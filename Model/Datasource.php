@@ -12,6 +12,7 @@ class DataSource
         $database = $_ENV['MySQL_DB_NAME'];
 
 
+
         try {
             $dsn = "mysql:host=" . $servername . ";dbname=" . $database . ";";
             $pdo = new PDO($dsn, $username, $password);
@@ -24,9 +25,7 @@ class DataSource
 
     public function collectAllTeachers()
     {
-
         $dbh = $this->connect();
-
         $allTeachers = [];
 
         $sql = "SELECT * FROM teacher_table";
@@ -38,5 +37,22 @@ class DataSource
 
         return $allTeachers;
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
