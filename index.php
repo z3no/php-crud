@@ -17,8 +17,8 @@ require 'Controller/GroupController.php';
 //this file should never be more than 20 lines of code!
 
 $controller = new HomepageController();
-if(isset($_GET['page']) && $_GET['page'] === 'info') {
-    $controller = new InfoController();
+if(isset($_GET['page']) && $_GET['page'] === 'group') {
+    $controller = new GroupController();
 }
 
 
