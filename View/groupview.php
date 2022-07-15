@@ -12,6 +12,7 @@ require 'View/includes/header.php';
                 <th scope="col">Name</th>
                 <th scope="col">Teacher</th>
                 <th scope="col">Campus</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +22,11 @@ require 'View/includes/header.php';
                 <td><?php echo $data->getName(); ?></td>
                 <td><?php echo $data->getTeacherName(); ?></td>
                 <td><?php echo $data->getCampusName(); ?></td>
+                <td>
+                    <button type="submit" class="btn btn-success"><i class="bi bi-plus-square text-light"></i></button>
+                    <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></button>
+                    <button type="submit" class="btn btn-danger"><i class="bi bi-trash text-light"></i></button>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
