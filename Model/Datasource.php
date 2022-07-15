@@ -53,5 +53,24 @@ class DataSource
         return $allCustomerNames;
     }
 
+    public function displayGroupNamesInStudenId()
+    {
+
+        $dbh = $this->connect();
+
+        $displayArrayGroupNames = [];
+
+        $sql = "SELECT st.id, st.name, st.email, st.group_id, gt.id, gt.name as group_name
+                FROM student_table st
+                JOIN group_table gt on st.group_id = gt.id
+                ORDER BY st.id";
+        $query = $dbh->query($sql);
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+            $student = new Student($row, []);
+            $displayArrayGroupNames[] = $student;
+        }
+
+        return $displayArrayGroupNames;
+    }
 
 }

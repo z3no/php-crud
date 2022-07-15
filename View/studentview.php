@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+include 'View/includes/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -157,6 +158,7 @@ declare(strict_types=1);
                     <th>Name <i class="fa fa-sort"></i></th>
                     <th>Email</th>
                     <th>Group_ID <i class="fa fa-sort"></i></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -166,6 +168,13 @@ declare(strict_types=1);
                         <td><?php echo $student->getName(); ?></td>
                         <td><?php echo $student->getEmail(); ?></td>
                         <td><?php echo $student->getGroupId(); ?></td>
+                        <td>
+                            <div class="btn-group">
+                                <input type='button' class="btn-secondary" value="edit">
+                                <input type='button' class="btn-secondary" value="delete">
+                            </div>
+                        </td>
+
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
@@ -175,3 +184,7 @@ declare(strict_types=1);
 </div>
 </body>
 </html>
+
+<?php
+include 'View/includes/footer.php';
+?>

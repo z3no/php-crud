@@ -2,22 +2,13 @@
 
 class HomepageController {
 
-    public function render($POST){
+    public function render($POST): void
+    {
 
         $dataSource = new Datasource();
         $dataSource->connect();
-        $studentsName = $dataSource->retrieveAllStudents();
+        $studentsName = $dataSource->displayGroupNamesInStudenId();
 
-
-        if(isset($POST['submit'])){
-
-
-            if($POST['customerId'] !== 'Customer' && $POST['productId'] !== 'Product' && $POST['quantity'] !== 'Quantity'){
-
-
-            }
-
-        }
 
         require 'View/studentview.php';
 
