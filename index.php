@@ -12,13 +12,16 @@ require 'Model/Group.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
 require 'Controller/GroupController.php';
+require 'Controller/EditGroupController.php';
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
 
 $controller = new HomepageController();
-if(isset($_GET['page']) && $_GET['page'] === 'group') {
+if(isset($_GET['page']) && $_GET['page'] === 'groups') {
     $controller = new GroupController();
+} elseif (isset($_GET['page']) && $_GET['page'] === 'edit_group') {
+    $controller = new EditGroupController();
 }
 
 
