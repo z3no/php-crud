@@ -5,19 +5,19 @@ require 'View/includes/header.php';
 
 <div id="container">
 
-    <table>
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Teacher</th>
-                <th>Campus</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Teacher</th>
+                <th scope="col">Campus</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach($groupData as $data): ?>
             <tr>
-                <td><?php echo $data->getId(); ?></td>
+                <th scope="row"><?php echo $data->getId(); ?></th>
                 <td><?php echo $data->getName(); ?></td>
                 <td><?php echo $data->getTeacherName(); ?></td>
                 <td><?php echo $data->getCampusName(); ?></td>
