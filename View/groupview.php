@@ -1,11 +1,13 @@
 <?php
 declare(strict_types=1);
+
+$page_title = "Group table";
 require 'View/includes/header.php';
 ?>
 
 <div id="container">
 
-    <a href="index.php"><button type="button" class="btn btn-success">Home</button></a>
+    <a href="index.php?page=home"><button type="button" class="btn btn-success">Home</button></a>
 
     <table class="table table-hover">
         <thead>
@@ -25,8 +27,7 @@ require 'View/includes/header.php';
                 <td><?php echo $data->getTeacherName(); ?></td>
                 <td><?php echo $data->getCampusName(); ?></td>
                 <td>
-                    <button type="submit" class="btn btn-success"><i class="bi bi-plus-square text-light"></i></button>
-                    <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></button>
+                    <a href="index.php?page=edit_group" <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></button>
                     <button type="submit" class="btn btn-danger"><i class="bi bi-trash text-light"></i></button>
                 </td>
             </tr>
