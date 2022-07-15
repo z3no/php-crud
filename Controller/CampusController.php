@@ -8,11 +8,15 @@ class CampusController
     {
         $dataSource = new DataSource();
         $dbc = $dataSource ->connect();
-
         $showAllCampus = $dataSource->getCampus();
 
-        //var_dump($showAllCampus);
+        if(isset($POST['submit'])){
+
+
+        }
+
         require 'View/campusview.php';
+        require 'View/campusviewedit.php';
     }
 }
 
