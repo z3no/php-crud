@@ -27,7 +27,7 @@ require 'View/includes/header.php';
                 <td><?php echo $data->getTeacherName(); ?></td>
                 <td><?php echo $data->getCampusName(); ?></td>
                 <td>
-                    <a href="index.php?page=edit_group" <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></button>
+                    <a href="index.php?page=edit_group"><button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></button></a>
                     <button type="submit" class="btn btn-danger"><i class="bi bi-trash text-light"></i></button>
                 </td>
             </tr>
