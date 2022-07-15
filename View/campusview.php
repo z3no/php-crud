@@ -17,7 +17,7 @@ require 'View/includes/headerCampus.php'
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($showAllCampus as $campus): ?>
+    <?php foreach  as $campus): ?>
         <tr>
             <th scope="row"><?php echo $campus->getId(); ?></th>
             <td><?php echo $campus->getName(); ?></td>
