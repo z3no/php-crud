@@ -36,6 +36,16 @@ class DataSource
 
     }
 
+    public function addCampus($name,$location){
+        $sql = "INSERT INTO campus_table (name,location) VALUES (?,?)";
+        $stmt = $this->connect()->query($sql);
+        $stmt->bindParam([$name,$location]);
+        $stmt->execute();
+    }
+
+    public function deleteCampus(){
+
+    }
     /*public function getTeachers() : array{
         $sql = "SELECT * FROM teacher_table";
         $stmt = $this->connect()->query($sql);
@@ -43,5 +53,4 @@ class DataSource
         $result = $stmt->fetch();
         return $result;
     }*/
-
 }
