@@ -5,6 +5,8 @@ require 'View/includes/header.php';
 
 <div id="container">
 
+    <a href="index.php"><button type="button" class="btn btn-success">Home</button></a>
+
     <table class="table table-hover">
         <thead>
             <tr>
