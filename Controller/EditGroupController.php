@@ -6,6 +6,7 @@ class EditGroupController
 
         $dataSource = new DataSource();
         $dataSource->connect();
+        $groupData = $dataSource->retrieveGroups();
 
         if(isset($POST['submit'])){
 
