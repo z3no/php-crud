@@ -82,7 +82,7 @@ try {
 }
 
 $statement = $pdo->prepare('SELECT * FROM teacher_table = :email');
-$statement->excute(['email' => $data['email']]);
+$statement->execute(['email' => $data['email']]);
 
 if (!empty($statement->fetch())) {
     echo 'User with such email exist. ';
