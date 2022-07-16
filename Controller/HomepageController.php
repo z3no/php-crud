@@ -12,10 +12,11 @@ class HomepageController {
         $studentsName = $dataSource->displayGroupNamesInStudenId();
         $dbc = $dataSource ->connect();
         $groupData = $dataSource->retrieveGroups();
-        $showAllTeachers = $dataSource->getTeachers();
+        $showAllTeachers = $dataSource->collectAllTeachers();
         $dataSource = new DataSource();
         $Dbc = $dataSource ->connect();
         $test = $dataSource->collectAllTeachers();
+        $showAllCampus = $dataSource->getCampus();
 
         //dump($showAllTeachers);
 
@@ -36,10 +37,11 @@ class HomepageController {
 
 
         }
-        require 'View/studentview.php';
-        require 'View/groupview.php';
-        require 'View/teachers.php';
-        require 'View/campusview.php';
+        require 'View/home.php';
+//        require 'View/studentview.php';
+//        require 'View/groupview.php';
+//        require 'View/teachers.php';
+//        require 'View/campusview.php';
 
 
     }

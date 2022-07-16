@@ -2,7 +2,7 @@
 
 class StudentController
 {
-    public function render($POST): void
+    public function render($GET, $POST): void
     {
 
         $dataSource = new Datasource();
