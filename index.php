@@ -8,17 +8,17 @@ $dotenv->load();
 
 //include all your model files here
 require 'Model/Datasource.php';
-<<<<<<< HEAD
+
 require 'Model/Student.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
-=======
+
 require 'Model/Campus.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
 require 'Controller/CampusController.php';
 
->>>>>>> pablo
+
 
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
@@ -29,9 +29,9 @@ if(isset($_GET['page']) && $_GET['page'] === 'campus') {
     $controller = new CampusController();
 }
 
-<<<<<<< HEAD
+
 
 $controller->render($_POST);
-=======
+
 $controller->render($_GET, $_POST);
->>>>>>> pablo
+
