@@ -2,7 +2,9 @@
 declare(strict_types=1);
 require 'View/includes/header.php';
 ?>
-
+    <section>
+        <p><a href="index.php">To home page</a></p>
+    </section>
 <div id="container">
 
     <table>

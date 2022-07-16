@@ -6,6 +6,9 @@ include 'View/includes/header.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <section>
+        <p><a href="index.php">To home page</a></p>
+    </section>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Students Table</title>

@@ -9,6 +9,7 @@ class TeacherController
         $dbc = $dataSource ->connect();
 
         $showAllTeachers = $dataSource->collectAllTeachers();
+        $test = $dataSource->collectAllTeachers();
 
         //var_dump($showAllCampus);
         require 'View/teachers.php';
