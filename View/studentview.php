@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-include 'View/includes/header.php';
 ?>
 
 <!DOCTYPE html>
