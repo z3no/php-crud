@@ -40,6 +40,9 @@ if (isset($_GET['page'])) {
         case 'campus':
             $controller = new CampusController();
             break;
+        case 'edit':
+            $controller = new CampusController();
+            break;
         default:
             $controller = new HomepageController();
     }
