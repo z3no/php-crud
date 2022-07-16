@@ -7,6 +7,7 @@ class StudentController
 
         $dataSource = new Datasource();
         $dataSource->connect();
+
         $studentsName = $dataSource->displayGroupNamesInStudenId();
 
 
