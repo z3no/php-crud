@@ -11,6 +11,7 @@ class DataSource
         $password = $_ENV['MySQL_DB_PASSWORD'];
         $database = $_ENV['MySQL_DB_NAME'];
 
+
         try {
             $dsn = "mysql:host=" . $servername . ";dbname=" . $database . ";";
             $pdo = new PDO($dsn, $username, $password);
@@ -21,14 +22,10 @@ class DataSource
         }
     }
 
-
-
     public function retrieveAllStudents(): bool|array
     {
         $dbconnect = $this->connect();
-
         $studentsArray = [];
-
         $sql = "SELECT * FROM student_table";
         $stmt = $dbconnect->query($sql);
         while($row =$stmt->fetch(PDO::FETCH_ASSOC)){
@@ -40,11 +37,8 @@ class DataSource
 
     public function retrieveAllCustomerNames()
     {
-
         $dbh = $this->connect();
-
         $allCustomerNames = [];
-
         $sql = "SELECT name FROM student_table";
         $query = $dbh->query($sql);
         while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -57,11 +51,8 @@ class DataSource
 
     public function displayGroupNamesInStudenId()
     {
-
         $dbh = $this->connect();
-
         $displayArrayGroupNames = [];
-
         $sql = "SELECT st.id, st.name, st.email, st.group_id, gt.id, gt.name as group_name
                 FROM student_table st
                 JOIN group_table gt on st.group_id = gt.id
@@ -78,27 +69,15 @@ class DataSource
     public function getCampus(){
 
         $allCampusNames = [];
-
         $sql = "SELECT id, name, location FROM campus_table";
         $stmt = $this->connect()->query($sql);
-
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $campus = new Campus($row);
             array_push($allCampusNames, $campus);
         }
+
         return $allCampusNames;
-
     }
-
-    /*public function getTeachers() : array{
-        $sql = "SELECT * FROM teacher_table";
-        $stmt = $this->connect()->query($sql);
-
-        $result = $stmt->fetch();
-        return $result;
-    }*/
-
-
 
     public function retrieveGroups() : array {
         $allGroupData = [];
@@ -117,13 +96,20 @@ class DataSource
         return $allGroupData;
     }
 
-    /*
-    public function retrieveGroupNames() : array {
-        $sql = "SELECT name FROM group_table";
-        $stmt = $this->connect()->query($sql);
-        $names = $stmt->fetchAll();
-        return $names;
-    }
-    */
 
+    public function collectAllTeachers()
+    {
+        $dbh = $this->connect();
+        $allTeachers = [];
+        $sql = "SELECT * FROM teacher_table";
+        $query = $dbh->query($sql);
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+            $teacher = new Teacher($row, []);
+            $allTeachers[] = $teacher;
+    }
+
+        return $allTeachers;
+    }
 }
+
+

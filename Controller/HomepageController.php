@@ -1,4 +1,6 @@
 <?php
+declare(strict_types = 1);
+
 
 class HomepageController {
 
@@ -8,14 +10,13 @@ class HomepageController {
         $dataSource = new Datasource();
         $dataSource->connect();
         $studentsName = $dataSource->displayGroupNamesInStudenId();
-
-        $dataSource = new DataSource();
-
         $dbc = $dataSource ->connect();
-
-        $dataSource->connect();
         $groupData = $dataSource->retrieveGroups();
         $showAllTeachers = $dataSource->getTeachers();
+        $dataSource = new DataSource();
+        $Dbc = $dataSource ->connect();
+        $test = $dataSource->collectAllTeachers();
+
         //dump($showAllTeachers);
 
 
@@ -37,5 +38,9 @@ class HomepageController {
         }
         require 'View/studentview.php';
         require 'View/groupview.php';
+        require 'View/teachers.php';
+        require 'View/campusview.php';
+
+
     }
 }
