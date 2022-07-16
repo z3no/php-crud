@@ -28,9 +28,10 @@ class DataSource
         $studentsArray = [];
         $sql = "SELECT * FROM student_table";
         $stmt = $dbconnect->query($sql);
-        while($row =$stmt->fetch(PDO::FETCH_ASSOC)){
-        $student = new Student($row, []);
-        array_push($studentsArray, $student);}
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $student = new Student($row, []);
+            array_push($studentsArray, $student);
+        }
 
         return $studentsArray;
     }
@@ -66,28 +67,30 @@ class DataSource
         return $displayArrayGroupNames;
     }
 
-    public function getCampus(){
+    public function getCampus()
+    {
 
         $allCampusNames = [];
         $sql = "SELECT id, name, location FROM campus_table";
         $stmt = $this->connect()->query($sql);
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $campus = new Campus($row);
             array_push($allCampusNames, $campus);
         }
 
         return $allCampusNames;
     }
+}
 
-    public function retrieveGroups() : array
-    {
-        $allGroupData = [];
-
-        $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
-                FROM group_table gt
-                JOIN teacher_table tt on gt.teacher_id = tt.id
-                JOIN campus_table ct on gt.campus_id = ct.id
-                ORDER BY gt.id";
+//    public function retrieveGroups() : array
+//    {
+//        $allGroupData = [];
+//        $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
+//                FROM group_table gt
+//                JOIN teacher_table tt on gt.teacher_id = tt.id
+//                JOIN campus_table ct on gt.campus_id = ct.id
+//                ORDER BY gt.id";
+//    }
 
 //        public function addCampus($name, $location)
 //        {
