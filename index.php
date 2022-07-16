@@ -8,23 +8,19 @@ $dotenv->load();
 
 //include all your model files here
 require 'Model/Datasource.php';
-
-
 require 'Model/Student.php';
-//include all your controllers here
-require 'Controller/HomepageController.php';
-
 require 'Model/Campus.php';
+require 'Model/Group.php';
+require 'Model/Teacher.php';
+
+
+
 //include all your controllers here
 require 'Controller/HomepageController.php';
 require 'Controller/CampusController.php';
-
-
-
-
-require 'Model/Group.php';
-//include all your controllers here
-require 'Controller/HomepageController.php';
+require 'Controller/GroupController.php';
+require 'Controller/StudentController.php';
+require 'Controller/TeacherController.php';
 
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
@@ -34,8 +30,6 @@ $controller = new HomeController();
 if(isset($_GET['page']) && $_GET['page'] === 'campus') {
     $controller = new CampusController();
 }
-
-
 
 $controller->render($_POST);
 

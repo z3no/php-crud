@@ -36,5 +36,4 @@ require 'View/includes/footer.php';
 
 
 require 'View/includes/footer.php';
-
 ?>
