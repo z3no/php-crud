@@ -11,7 +11,7 @@ require 'View/includes/header.php';
             <div class="card-body">
                 <h5 class="card-title">Checkout our students</h5>
                 <p class="card-text">Our students are like our children, they are all equal and eager to learn.</p>
-                <a href="index.php?page=students" class="btn btn-primary stretched-link">Go to students</a>
+                <a href="index.php?page=student" class="btn btn-primary stretched-link">Go to students</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -19,7 +19,7 @@ require 'View/includes/header.php';
             <div class="card-body">
                 <h5 class="card-title">Our wise teachers</h5>
                 <p class="card-text">These teachers have all the knowledge, wisdom and skills you'll need.</p>
-                <a href="index.php?page=teachers" class="btn btn-primary stretched-link">Go to teachers</a>
+                <a href="index.php?page=teacher" class="btn btn-primary stretched-link">Go to teachers</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -27,7 +27,7 @@ require 'View/includes/header.php';
             <div class="card-body">
                 <h5 class="card-title">See our groups</h5>
                 <p class="card-text">Take a look at our awesome groups you could end up in and where their locations are.</p>
-                <a href="index.php?page=groups" class="btn btn-primary stretched-link">Go to groups</a>
+                <a href="index.php?page=group" class="btn btn-primary stretched-link">Go to groups</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
