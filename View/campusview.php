@@ -4,7 +4,7 @@ require 'View/includes/headerCampus.php'
 ?>
 
 <section>
-    <p><a href="index.php?page=home">To home page</a></p>
+    <a href="index.php?page=home"><button type="button" class="btn btn-success">Home</button></a>
 </section>
 
 <table class="table table-hover">

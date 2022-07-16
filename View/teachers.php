@@ -1,28 +1,42 @@
 <?php
 declare(strict_types=1);
+require 'View/includes/header.php';
 ?>
-<section>
-    <p><a href="index.php">To home page</a></p>
-</section>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <div id="container">
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach($test as $student): ?>
-        <tr>
-            <td><?php echo $student->getId(); ?></td>
-            <td><?php echo $student->getName(); ?></td>
-            <td><?php echo $student->getEmail(); ?></td>
-        </tr>
-    <?php endforeach; ?>
-    </tbody>
+        <a href="index.php?page=home"><button type="button" class="btn btn-success">Home</button></a>
 
-</table>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($test as $student): ?>
+                <tr>
+
+                    <td><?php echo $student->getId(); ?></td>
+                    <td><?php echo $student->getName(); ?></td>
+                    <td><?php echo $student->getEmail(); ?></td>
+                    <td>
+                        <button type="submit" name="edit" class="btn btn-warning" value="edit">
+                            <i class="bi bi-pencil-square text-light">Edit</i></button>
+                        <button type="submit" name="remove" class="btn btn-danger">Delete<i class="bi bi-trash text-light"></i>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+<?php
+require 'View/includes/footer.php';
+?>
