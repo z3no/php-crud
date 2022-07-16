@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 class HomepageController {
 
-
     public function render($POST): void
     {
         $dataSource = new Datasource();
@@ -36,7 +35,6 @@ class HomepageController {
         */
 
         if(isset($POST['submit'])) {
-
 
 
         }

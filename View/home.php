@@ -4,7 +4,6 @@ $page_title = "Dragon Ball Z school of schools";
 require 'View/includes/header.php';
 ?>
 
-
     <section class="d-flex">
         <div class="card" style="width: 18rem;">
             <img src="./images/students.jpeg" class="card-img-top" alt="students image">
@@ -40,8 +39,6 @@ require 'View/includes/header.php';
         </div>
 
     </section>
-
-
 
 <?php
 require 'View/includes/footer.php';

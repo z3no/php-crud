@@ -16,7 +16,6 @@ vendor/
 .gitignore
 .env
 !.env.sample
-.idea
 # Executables
 *.swf
 *.air
