@@ -1,34 +1,42 @@
 <?php
 declare(strict_types=1);
+
+$page_title = "Group table";
+require 'View/includes/header.php';
 ?>
-    <section>
-        <p><a href="index.php">To home page</a></p>
-    </section>
-<div id="container">
 
-    <table>
-        <thead>
+    <div id="container">
+
+        <a href="index.php?page=home"><button type="button" class="btn btn-success">Home</button></a>
+
+        <table class="table table-hover">
+            <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Teacher</th>
-                <th>Campus</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Teacher</th>
+                <th scope="col">Campus</th>
+                <th scope="col">Actions</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <?php foreach($groupData as $data): ?>
-            <tr>
-                <td><?php echo $data->getId(); ?></td>
-                <td><?php echo $data->getName(); ?></td>
-                <td><?php echo $data->getTeacherName(); ?></td>
-                <td><?php echo $data->getCampusName(); ?></td>
-            </tr>
+                <tr>
+                    <th scope="row"><?php echo $data->getId(); ?></th>
+                    <td><?php echo $data->getName(); ?></td>
+                    <td><?php echo $data->getTeacherName(); ?></td>
+                    <td><?php echo $data->getCampusName(); ?></td>
+                    <td>
+                        <a href="index.php?page=edit_group"><button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></button></a>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash text-light"></i></button>
+                    </td>
+                </tr>
             <?php endforeach; ?>
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
 
-</div>
+    </div>
 
 
 
