@@ -41,10 +41,5 @@ class HomepageController {
 
         }
         require 'View/home.php';
-        require 'View/studentview.php';
-        require 'View/groupview.php';
-        require 'View/teachers.php';
-        require 'View/campusview.php';
-        require 'View/campusviewedit.php';
     }
 }
