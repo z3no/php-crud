@@ -80,26 +80,40 @@ class DataSource
 
         return $allCampusNames;
     }
+
+    public function retrieveGroups() : array {
+        $allGroupData = [];
+
+        $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
+                FROM group_table gt
+                JOIN teacher_table tt on gt.teacher_id = tt.id
+                JOIN campus_table ct on gt.campus_id = ct.id
+                ORDER BY gt.id";
+        $stmt = $this->connect()->query($sql);
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $group = new Group($row);
+            array_push($allGroupData, $group);
+        }
+
+        return $allGroupData;
+    }
+
+    public function collectAllTeachers()
+    {
+        $dbh = $this->connect();
+        $allTeachers = [];
+
+        $sql = "SELECT * FROM teacher_table";
+        $query = $dbh->query($sql);
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+            $teacher = new Teacher($row, []);
+            $allTeachers[] = $teacher;
+        }
+
+        return $allTeachers;
+    }
+
 }
 
-//    public function retrieveGroups() : array
-//    {
-//        $allGroupData = [];
-//        $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
-//                FROM group_table gt
-//                JOIN teacher_table tt on gt.teacher_id = tt.id
-//                JOIN campus_table ct on gt.campus_id = ct.id
-//                ORDER BY gt.id";
-//    }
-
-//        public function addCampus($name, $location)
-//        {
-//            $sql = "INSERT INTO campus_table (name,location) VALUES (?,?)";
-//            $stmt = $this->connect()->query($sql);
-//            $stmt->bindParam([$name, $location]);
-//            $stmt->execute();
-//        }
 //
-
-
 
