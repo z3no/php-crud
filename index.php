@@ -22,8 +22,11 @@ require 'Controller/TeacherController.php';
 //require 'Controller/InfoController.php';
 
 
+
+
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
+
 
 $controller = new HomepageController($_POST, $_GET);
 if (isset($_GET['page'])) {
@@ -40,15 +43,15 @@ if (isset($_GET['page'])) {
         case 'campus':
             $controller = new CampusController();
             break;
-        case 'edit':
-            $controller = new CampusController();
+        case 'campusEdit':
+            $controller = new CampusEditController();
             break;
         default:
             $controller = new HomepageController();
     }
-}
 
-$controller->render($_GET, $_POST);
+    $controller->render($_GET, $_POST);
+}
 
 
 

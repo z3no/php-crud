@@ -12,6 +12,9 @@ include 'View/includes/header.php';
 
 </section>
 
+    </section>
+
+
 
 <div>
 

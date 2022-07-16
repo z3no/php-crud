@@ -1,26 +1,39 @@
 <?php
 declare(strict_types=1);
+require 'View/includes/headerCampus.php'
 ?>
 
 <section>
-    <p><a href="index.php">To home page</a></p>
+    <p><a href="index.php?page=home">To home page</a></p>
 </section>
-<table>
+
+<table class="table table-hover">
     <thead>
     <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Location ID</th>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Location ID</th>
+        <th scope="col">Actions</th>
     </tr>
     </thead>
     <tbody>
-    <?php foreach($showAllCampus as $campus): ?>
+    <?php foreach ($showAllCampus as $campus): ?>
         <tr>
-            <td><?php echo $campus->getId(); ?></td>
+            <th scope="row"><?php echo $campus->getId(); ?></th>
             <td><?php echo $campus->getName(); ?></td>
             <td><?php echo $campus->getLocation(); ?></td>
+            <td>
+                <a href="index.php?page=campusedit">
+                    <button type="submit" name="edit" class="btn btn-warning" value="edit">
+                        <i class="bi bi-pencil-square text-light"></i></button>
+                </a>
+                <button type="submit" name="remove" class="btn btn-danger"><i class="bi bi-trash text-light"></i>
+                </button>
+            </td>
         </tr>
     <?php endforeach; ?>
     </tbody>
-
 </table>
+<button type="submit" name="add" class="btn btn-success"><i class="bi bi-plus-square text-light"></i></button>
+
+<?php require 'View/includes/footer.php' ?>
