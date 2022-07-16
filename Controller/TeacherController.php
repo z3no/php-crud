@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 class TeacherController
 {
@@ -7,9 +8,10 @@ class TeacherController
         $dataSource = new DataSource();
         $dbc = $dataSource ->connect();
 
-        $showAllTeachers = $dataSource->getTeachers();
+        $showAllTeachers = $dataSource->collectAllTeachers();
 
         //var_dump($showAllCampus);
-        require 'View/teacherview.php';
+        require 'View/teachers.php';
     }
 }
+

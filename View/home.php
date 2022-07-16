@@ -1,15 +1,9 @@
 <?php
 declare(strict_types=1);
-
-
 include 'View/includes/header.php';
-
-require 'View/includes/header.php';
-
-
-require 'View/includes/header.php';
-
 ?>
+
+
     <section>
     <p><a href="index.php?page=campus">To campus page</a></p>
 
@@ -23,17 +17,6 @@ require 'View/includes/header.php';
 </div>
 
 
-
-
-
-
 <?php
-
-
 include 'View/includes/footer.php';
-
-require 'View/includes/footer.php';
-
-
-require 'View/includes/footer.php';
 ?>
