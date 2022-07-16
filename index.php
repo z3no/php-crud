@@ -9,6 +9,7 @@ $dotenv->load();
 //include all your model files here
 require 'Model/Datasource.php';
 
+
 require 'Model/Student.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
@@ -19,6 +20,11 @@ require 'Controller/HomepageController.php';
 require 'Controller/CampusController.php';
 
 
+
+
+require 'Model/Group.php';
+//include all your controllers here
+require 'Controller/HomepageController.php';
 
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller

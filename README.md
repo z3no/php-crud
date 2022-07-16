@@ -73,3 +73,27 @@ As a group we will set up everything for _**git**_ and make the _**database**_.
     - Edge case: If you remove a class, make sure to remove the link between the students and the class.
 - [ ] Page to edit and existing entity
 - [ ] Page to create a new entity
+
+***
+
+## Stand-up meeting 14/07/2022
+***
+
+Yesterday we managed to create our database, so our goal for today is to var_dump the data for each page and to get the controllers working to go from one page to another.
+
+HomePage buttons where to go -> Student / Teacher / Group / Campus
+
+GENERAL OVERVIEW
+
+- General Overview of all records of that entity a table (each row has a button to edit or delete).
+- Page should have a "create new" button.
+
+
+DETAILED OVERVIEW
+
+- include a button to delete this entity
+- teacher cannot be removed if he is still assigned to a class (if you remove the link between the students and the class)
+
+
+PAGE TO EDIT existing entity
+PAGE TO CREATE a new entity
