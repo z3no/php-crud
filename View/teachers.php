@@ -24,7 +24,7 @@ include_once 'Model/Datasource.php';
             <th scope="row"></th>
             <?php foreach($allTeachers as $teacher): ?>
         <tr>
-            <th scope="col"><a href=""><button class="btn btn-danger">Delete</button></a></th>
+            <th scope="col"><a href=""><button name="delete" class="btn btn-danger">Delete</button></a></th>
             <th scope="col"><a href=""><button class="btn btn-success">Edit</button></a></th>
             <td><?php echo $teacher->getId(); ?></td>
             <td><?php echo $teacher->getName(); ?></td>
@@ -57,6 +57,9 @@ include_once 'Model/Datasource.php';
     </div>
 
 
+
+
+
 <?php
 require_once 'Model/Datasource.php';
 if (isset($_POST['save'])) {
@@ -73,8 +76,8 @@ if (!empty($errors)) {
     exit();
 }
 
- isset($data['email']);
-if (!filter_var($data, FILTER_VALIDATE_EMAIL)) {
+ $email = $data['email'];
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo 'Invalid email format';
     exit();
 }
