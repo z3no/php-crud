@@ -209,6 +209,7 @@ In our campus controller:
 - Reflect more.
 - Already start to merge things once we finished something. If we then have issues we can fix them early on.
 - We learned about foreign keys in databases and how to link them, this went surprisingly well for us.
+- Do more stand-up meetings, we did when we were together, but forgot to do them when we were not together
 
 ## Problems we encountered
 - We had some communication issues, because Pablo, Zeno and Michael would change to Dutch too often, it was not fun for Alex. We talked about this and it is something we can improve on, and we'll deal with this early on.
@@ -217,3 +218,4 @@ In our campus controller:
 - We are still all new to MVC and learning at the pace we needed to code was very hard.
 - We had issues with merging, also because we have not done too many group projects it isn't always easy at the pace we are going with the course.
 - We communicated well the day we were all together, once we started working from home we lost our communication.
+- Make sure everyone is following so everyone understands what's happening
