@@ -4,7 +4,7 @@ $page_title = "Dragon Ball Z school of schools";
 require 'View/includes/header.php';
 ?>
 
-    <section class="d-flex">
+    <section class="d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
             <img src="./images/students.jpeg" class="card-img-top" alt="students image">
             <div class="card-body">
