@@ -5,52 +5,63 @@ include_once 'Model/Datasource.php';
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<table class="table">
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Teacher Name</th>
-        <th scope="col">Teacher Email</th>
-    </tr>
-    </thead>
-    <tr>
-        <th scope="row"></th>
-        <?php foreach($allTeachers as $teacher): ?>
-    <tr>
-        <td><?php echo $teacher->getId(); ?></td>
-        <td><?php echo $teacher->getName(); ?></td>
-        <td><?php echo $teacher->getEmail(); ?></td>
-
-    </tr>
-    <?php endforeach; ?>
-</table>
-
-<div class="row justify-content-center">
-    <form action="" method="POST">
-    <div class="form-group">
-        <lable>Name</lable>
-        <label>
-            <input type="text" name="name" class="form-control" >
-        </label>
+<div class="container">
+    <div class="row-12">
     </div>
-        <div class="form-group">
-            <lable>Email</lable>
-            <label>
-                <input type="text" name="email" class="form-control">
-            </label>
-        </div>
-        <div class="form-group">
-           <button class="btn btn-primary" type="submit" name="save">Create New</button>
-        </div>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
+            <th scope="col">ID</th>
+            <th scope="col">Teacher Name</th>
+            <th scope="col">Teacher Email</th>
 
-    </form>
-</div>
+
+        </tr>
+        </thead>
+        <tr>
+            <th scope="row"></th>
+            <?php foreach($allTeachers as $teacher): ?>
+        <tr>
+            <th scope="col"><a href=""><button class="btn btn-danger">Delete</button></a></th>
+            <th scope="col"><a href=""><button class="btn btn-success">Edit</button></a></th>
+            <td><?php echo $teacher->getId(); ?></td>
+            <td><?php echo $teacher->getName(); ?></td>
+            <td><?php echo $teacher->getEmail(); ?></td>
+
+        </tr>
+        <?php endforeach; ?>
+    </table>
+
+    <div class="row justify-content-center">
+        <form action="" method="POST">
+            <div class="form-group">
+                <lable>Name</lable>
+                <label>
+                    <input type="text" name="name" class="form-control" >
+                </label>
+            </div>
+            <div class="form-group">
+                <lable>Email</lable>
+                <label>
+                    <input type="text" name="email" class="form-control">
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" name="save">Create New</button>
+            </div>
+
+        </form>
+    </div>
+    </div>
+
 
 <?php
 require_once 'Model/Datasource.php';
 if (isset($_POST['save'])) {
     $data = $_POST;
-//    Validate required filds
+//    Validate required fields
     $errors = [];
     foreach (['name', 'email'] as $field)
         if (empty($data[$field])) {
@@ -62,8 +73,8 @@ if (!empty($errors)) {
     exit();
 }
 
-$email = $data['email'];
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+ isset($data['email']);
+if (!filter_var($data, FILTER_VALIDATE_EMAIL)) {
     echo 'Invalid email format';
     exit();
 }
@@ -100,6 +111,10 @@ $statement->execute([
 ]);
 echo 'The user has been successfully save.';
 ?>
+
+
+
+
 
 
 
