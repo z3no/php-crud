@@ -8,6 +8,8 @@ require 'View/includes/header.php';
     <div id="container">
 
         <a href="index.php?page=home"><button type="button" class="btn btn-success">Home</button></a>
+        <a href="index.php?page=student"><button type="button" class="btn btn-success">Students</button></a>
+        <a href="index.php?page=teacher"><button type="button" class="btn btn-success">Teachers</button></a>
 
         <table class="table table-hover">
             <thead>
