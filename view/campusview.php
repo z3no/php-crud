@@ -25,9 +25,9 @@ require 'view/include/headercampus.php'
                 <a href="index.php?page=campusedit">
                     <button type="submit" name="edit" class="btn btn-warning" value="<?=$campus->getId();?>"><i class="bi bi-pencil-square text-light"></i></button>
                 </a>
-                <a href="index.php?page=campusdelete>
+                <form action="index.php?page=campus" method="post">
                 <button type="submit" name="remove" class="btn btn-danger" value="<?=$campus->getId();?>"><i class="bi bi-trash text-light"></i></button>
-                </a>
+                </form>
             </td>
         </tr>
     <?php endforeach; ?>
