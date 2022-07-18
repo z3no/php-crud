@@ -154,7 +154,23 @@ Let's say we want to create a new campus, what do we need?
 
 ### Update
 
-To update an existing row of a table
+To update an existing row of a table what we'll do:
+
+#### STEP 1
+- We create a new function in our model class, we can name it editCampus
+- ```php
+    public function editCampus(int $id, string $name, string $location)
+    {
+        $sql = "UPDATE campus_table SET name=?, location=? WHERE id=?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$newName, $newLocation, $id]);
+    }
+  ```
+
+- Next we make a new view page, this we can call editCampus.php
+- ```html
+    
+  ```
 
 ### Delete
 
