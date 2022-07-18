@@ -167,15 +167,19 @@ To update an existing row of a table what we'll do:
     }
   ```
 
-- Next we make a new view page, this we can call editCampus.php
+- Next we make a new view page, we can call it editCampus.php:
 - ```html
     <form action="index.php?page=campus" method="post">
-        <label for="cname"> Campus name:</label><br>
-        <input type="text" id="cname" name="newCampusName" value="campus"><br>
-        <label for="lname">Location name:</label><br>
-        <input type="text" id="lname" name="newLocationName" value="location"><br><br>
-        <input type="submit" name="submit" value="Submit">
+        We don't have enough time, so we don't know what to do here yet.
     </form>
+  ```
+
+- Then we can go to the controller:
+- ```php
+    if(isset($POST['update'])){
+        Not enough time, we will reflect on this.
+    }
+    $showAllCampus = $campusData->getCampus();
   ```
 
 ### Delete
@@ -198,3 +202,18 @@ In our campus controller:
     $showAllCampus = $campusData->getCampus();
   ```
   
+## What we learned
+- Planning is key!
+- First setup a good working environment on github
+- Don't start coding too fast, first create a scheme on how we need to work on the whole project.
+- Reflect more.
+- Already start to merge things once we finished something. If we then have issues we can fix them early on.
+- We learned about foreign keys in databases and how to link them, this went surprisingly well for us.
+
+## Problems we encountered
+- We had some communication issues, because Pablo, Zeno and Michael would change to Dutch too often, it was not fun for Alex. We talked about this and it is something we can improve on, and we'll deal with this early on.
+- We started of well, but because we didn't even look further ahead, we eventually encountered a wall.
+- We found that the timeframe we had was very short for such an exercise.
+- We are still all new to MVC and learning at the pace we needed to code was very hard.
+- We had issues with merging, also because we have not done too many group projects it isn't always easy at the pace we are going with the course.
+- We communicated well the day we were all together, once we started working from home we lost our communication.
