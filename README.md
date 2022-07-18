@@ -75,7 +75,12 @@ As a group we will set up everything for _**git**_ and make the _**database**_.
 - [x] Page to create a new entity
 
 ***
+## Making the flowchart 13/07/2022
+***
+We started wednesday making a flowchart and thinking about the foreign keys connection
 
+![function](images/flowchart.png)
+***
 ## Stand-up meeting 14/07/2022
 ***
 
