@@ -21,6 +21,11 @@ class CampusLoader extends DataSource
         $sql = "INSERT INTO campus_table (name, location) values ('$name','$location')";
         $this->connect()->exec($sql);
     }
+
+    public function deleteCampus($id){
+        $sql="DELETE FROM campus_table WHERE id=" .$id;
+        $this->connect()->exec($sql);
+    }
     /*public function deleteCampus(int $id): void{
         $sql = 'delete from campus_table where id =' . $id;
         $this->connect()->query($sql);
