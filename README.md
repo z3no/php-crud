@@ -97,3 +97,23 @@ DETAILED OVERVIEW
 
 PAGE TO EDIT existing entity
 PAGE TO CREATE a new entity
+
+
+***
+
+## Friday 15/07/2022
+***
+
+Friday was a day full of ups and downs for the group. The half of the group was at campus and the other half at home. Communication was rusty. 
+Which complicated everything and we all went on our individual coding spree. We all managed to read the data but the next steps to create, update and delete where not discussed properly and we couldn't manage to make these work on friday.
+Some of our group managed to work further during the weekend, Michael made extra branches for testing. Zeno couldn't be there because of his renovations.
+
+***
+
+## Monday 18/07/2022
+***
+
+So new day, fresh minds, totally refueled, but still a monday.
+The most important thing at the moment is reflecting on what we did, how we did and what we can improve for the future.
+
+So when we all had our read pages of our data, we found out it would have been easier to start a merge from that point.
