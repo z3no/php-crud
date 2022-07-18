@@ -16,7 +16,7 @@ class HomeController {
 
         }
 
-        require 'View/home.php';
+        require 'view/home.php';
 
     }
 }
