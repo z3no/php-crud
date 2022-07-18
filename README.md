@@ -56,15 +56,15 @@ As a group we will set up everything for _**git**_ and make the _**database**_.
           - name
           - location
 - [x] export with mysqldump
-- [ ] env file
-- [ ] Our database connection, Datasource class
+- [x] env file
+- [x] Our database connection, Datasource class
 
 ### Individually
-- [ ] MVC Model
-  - [ ] Create Model Class
-  - [ ] Create Controller
-  - [ ] Create View
-- [ ] Overview of all records of your entity in a table
+- [x] MVC Model
+  - [x] Create Model Class
+  - [x] Create Controller
+  - [x] Create View
+- [x] Overview of all records of your entity in a table
   - [ ] Each row has a button to edit or delete entity
   - [ ] Page should have a `create new` button
 - [ ] Detailed overview of the selected entity
