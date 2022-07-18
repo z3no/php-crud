@@ -215,7 +215,7 @@ In our campus controller:
 - We had some communication issues, because Pablo, Zeno and Michael would change to Dutch too often, it was not fun for Alex. We talked about this and it is something we can improve on, and we'll deal with this early on.
 - We started of well, but because we didn't even look further ahead, we eventually encountered a wall.
 - We found that the timeframe we had was very short for such an exercise.
-- We are still all new to MVC and learning at the pace we needed to code was very hard.
+- We are still all new to MVC/OOP and learning at the pace we needed to code was very hard.
 - We had issues with merging, also because we have not done too many group projects it isn't always easy at the pace we are going with the course.
 - We communicated well the day we were all together, once we started working from home we lost our communication.
 - Make sure everyone is following so everyone understands what's happening
