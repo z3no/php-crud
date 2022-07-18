@@ -105,7 +105,7 @@ PAGE TO CREATE a new entity
 ***
 
 Friday was a day full of ups and downs for the group. The half of the group was at campus and the other half at home. Communication was rusty. 
-Which complicated everything and we all went on our individual coding spree. We all managed to read the data but the next steps to create, update and delete where not discussed properly and we couldn't manage to make these work on friday.
+Which complicated everything, we all went on our individual coding spree. We all managed to read the data but the next steps to create, update and delete where not discussed properly and we couldn't manage to make these work on friday.
 Some of our group managed to work further during the weekend, Michael made extra branches for testing. Zeno couldn't be there because of his renovations.
 
 ***
@@ -125,7 +125,54 @@ Now let's take a look at our buttons:
 ### Create
 
 Let's say we want to create a new campus, what do we need?
-- We need a new function in our Model that will tell our database to create a new Campus
-- We'll need a new page in our View that will have an input field for a new name and a location where the campus will be located.
-- In our controller we can retrieve the input data from our create 
 
+#### STEP 1
+- We need a new function in our Model that will tell our database to create a new Campus.
+
+![function](images/sql_function.png)
+
+- Our sql statement will insert a new name and location into our campus_table. We use 2 placeholders which will contain the input values.
+- $this->connect()->exec($sql), we first make a connection to the database and exec will execute our sql statement.
+
+#### STEP 2
+- We'll need a new page in our View that will have an input field for a new name and a location where the campus will be located.
+
+![create form](images/createview.png)
+
+- Our action will bring us back to the campus page once we press the submit button. We make use of the post method. For the input fields it's important to give these a name, in our case we have 'newCampusName' and 'newLocationName' these we will need for our controller. Our button we also name, 'confirm_Add' which in turn we will also need for the controller.
+
+#### STEP 3
+- In our controller we can retrieve the input data from our create page.
+
+![controller](images/CampusController.png)
+
+- In our render function we make a new CampusLoader (this extends our datasource) where we can access our methods.
+- If we press the submit button it will store 2 variables 'newCampusName' and 'newLocationName' inside $POST.
+- In the function createCampus we place our 2 variables that contain the input data that needs to be added in the database.
+- When we return to our campus overview, we will see that we added a new Campus.
+
+
+### Update
+
+To update an existing row of a table
+
+### Delete
+
+To delete a row we don't need a new view page. 
+
+In our campusLoader we could add a function deleteCampus($id)
+Our sql statement will be different and we will delete by id.
+- ```php
+    $sql = "DELETE FROM student_table WHERE id =" . $id;
+    $this->connect()->exec($sql);
+  ```
+
+In our campus controller:
+- ```php
+    if(isset($POST['remove'])){
+    $deleteId = $POST['remove'];
+    $campusData->deleteCampus($deleteId);
+    }
+    $showAllCampus = $campusData->getCampus();
+  ```
+  
