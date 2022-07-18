@@ -38,23 +38,6 @@ class DataSource
         return $allGroupData;
     }
 
-    public function retrieveTeachersForGroups() : array {
-        $teachersForGroups = [];
-
-        $sql = "SELECT gt.id, gt.name, gt.teacher_id, tt.name as teacher_name, gt.campus_id, ct.name as campus_name
-                FROM group_table gt
-                JOIN teacher_table tt on gt.teacher_id = tt.id
-                JOIN campus_table ct on gt.campus_id = ct.id
-                ORDER BY gt.id";
-        $stmt = $this->connect()->query($sql);
-        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            $group = new Group($row);
-            array_push($teachersForGroups, $group);
-        }
-
-        return $allGroupData;
-    }
-
     /*
     public function retrieveGroupNames() : array {
         $sql = "SELECT name FROM group_table";
