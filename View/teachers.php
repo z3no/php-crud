@@ -5,24 +5,22 @@ include_once 'Model/Datasource.php';
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
-
-
 <table class="table">
     <thead class="thead-dark">
     <tr>
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Teacher Name</th>
         <th scope="col">Teacher Email</th>
     </tr>
     </thead>
     <tr>
         <th scope="row"></th>
-        <?php foreach($allTeachers as $student): ?>
+        <?php foreach($allTeachers as $teacher): ?>
     <tr>
-        <td><?php echo $student->getId(); ?></td>
-        <td><?php echo $student->getName(); ?></td>
-        <td><?php echo $student->getEmail(); ?></td>
+        <td><?php echo $teacher->getId(); ?></td>
+        <td><?php echo $teacher->getName(); ?></td>
+        <td><?php echo $teacher->getEmail(); ?></td>
+
     </tr>
     <?php endforeach; ?>
 </table>
@@ -31,11 +29,15 @@ include_once 'Model/Datasource.php';
     <form action="" method="POST">
     <div class="form-group">
         <lable>Name</lable>
-        <input type="text" name="name" class="form-control" >
+        <label>
+            <input type="text" name="name" class="form-control" >
+        </label>
     </div>
         <div class="form-group">
             <lable>Email</lable>
-            <input type="text" name="email" class="form-control">
+            <label>
+                <input type="text" name="email" class="form-control">
+            </label>
         </div>
         <div class="form-group">
            <button class="btn btn-primary" type="submit" name="save">Create New</button>
@@ -48,6 +50,7 @@ include_once 'Model/Datasource.php';
 require_once 'Model/Datasource.php';
 if (isset($_POST['save'])) {
     $data = $_POST;
+//    Validate required filds
     $errors = [];
     foreach (['name', 'email'] as $field)
         if (empty($data[$field])) {
@@ -65,6 +68,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
+//Database connection
 $servername = $_ENV['MySQL_DB_HOST'];
 $username = $_ENV['MySQL_DB_USER_NAME'];
 $password = $_ENV['MySQL_DB_PASSWORD'];
@@ -88,7 +92,7 @@ if (!empty($statement->fetch())) {
     echo 'User with such email exist. ';
     exit();
 }
-
+//   Insert new user
 $statement = $pdo->prepare('INSERT INTO teacher_table(email, name) VALUES (:email, :name)');
 $statement->execute([
         'email' => $data['email'],
