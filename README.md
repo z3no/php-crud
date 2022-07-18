@@ -116,4 +116,16 @@ Some of our group managed to work further during the weekend, Michael made extra
 So new day, fresh minds, totally refueled, but still a monday.
 The most important thing at the moment is reflecting on what we did, how we did and what we can improve for the future.
 
-So when we all had our read pages of our data, we found out it would have been easier to start a merge from that point.
+So when we all had our read pages for our data, we found out it would have been easier to start a merge from that point.
+When then making the create, update and delete button we could have used the classes and methods from the other pages, where needed.
+For instance to make a new group it would have been handy to make a dropdown list for teachers and campuses. To choose which teacher would belong to a new group and at what campus the group would be located.
+
+Now let's take a look at our buttons:
+
+### Create
+
+Let's say we want to create a new campus, what do we need?
+- We need a new function in our Model that will tell our database to create a new Campus
+- We'll need a new page in our View that will have an input field for a new name and a location where the campus will be located.
+- In our controller we can retrieve the input data from our create 
+
