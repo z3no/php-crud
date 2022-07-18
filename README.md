@@ -169,7 +169,13 @@ To update an existing row of a table what we'll do:
 
 - Next we make a new view page, this we can call editCampus.php
 - ```html
-    
+    <form action="index.php?page=campus" method="post">
+        <label for="cname"> Campus name:</label><br>
+        <input type="text" id="cname" name="newCampusName" value="campus"><br>
+        <label for="lname">Location name:</label><br>
+        <input type="text" id="lname" name="newLocationName" value="location"><br><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
   ```
 
 ### Delete
