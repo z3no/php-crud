@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-$page_title = "Group table";
+$page_title = "Our students";
 require 'View/includes/header.php';
 ?>
 
@@ -28,8 +28,8 @@ require 'View/includes/header.php';
                 <td><?php echo $student->getGroupId(); ?></td>
                 <td>
                     <button type="submit" name="edit" class="btn btn-warning" value="edit">
-                        <i class="bi bi-pencil-square text-light">Edit</i></button>
-                    <button type="submit" name="remove" class="btn btn-danger">Delete<i class="bi bi-trash text-light"></i>
+                        <i class="bi bi-pencil-square text-light"></i></button>
+                    <button type="submit" name="remove" class="btn btn-danger"><i class="bi bi-trash text-light"></i>
 
                 </td>
             </tr>

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
-require 'View/includes/headerCampus.php'
+$page_title = "Our Campuses";
+require 'View/includes/header.php'
 ?>
 
 <section>

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-$page_title = "Group table";
+$page_title = "Our groups";
 require 'View/includes/header.php';
 ?>
 
