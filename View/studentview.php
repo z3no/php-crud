@@ -16,7 +16,7 @@ require 'View/includes/header.php';
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
-            <th scope="col">Teacher</th>
+            <th scope="col">Email</th>
             <th scope="col">Campus</th>
             <th scope="col">Actions</th>
         </tr>
