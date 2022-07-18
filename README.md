@@ -106,7 +106,7 @@ PAGE TO CREATE a new entity
 
 Friday was a day full of ups and downs for the group. The half of the group was at campus and the other half at home. Communication was rusty. 
 Which complicated everything, we all went on our individual coding spree. We all managed to read the data but the next steps to create, update and delete where not discussed properly and we couldn't manage to make these work on friday.
-Some of our group managed to work further during the weekend, Michael made extra branches for testing. Zeno couldn't be there because of his renovations.
+Some of our group managed to work further during the weekend, Michael and Pablo made extra branches for testing. Zeno couldn't be there because of his renovations.
 
 ***
 
