@@ -6,6 +6,10 @@ bin-release/
 
 # Other files and folders
 .settings/
+composer.json
+composer.lock
+.env
+.idea/
 
 # Executables
 *.swf
