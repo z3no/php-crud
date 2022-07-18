@@ -19,5 +19,6 @@ class CampusController
         $showAllCampus = $campusData->getCampus();
         require 'view/campusview.php';
     }
+
 }
 

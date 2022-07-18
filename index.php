@@ -2,7 +2,9 @@
 declare(strict_types=1);
 
 require_once realpath(__DIR__ . "/vendor/autoload.php");
+
 use Dotenv\Dotenv;
+
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -13,7 +15,8 @@ require 'model/CampusLoader.php';
 //include all your controllers here
 require 'controller/HomeController.php';
 require 'controller/CampusController.php';
-
+require 'controller/CampusEditController.php';
+require 'controller/CampusCreateController.php';
 
 
 
@@ -44,6 +47,12 @@ if(isset($_GET['page']) && $_GET['page'] === 'home'){
 }
 elseif (isset($_GET['page']) && $_GET['page'] === 'campus') {
     $controller = new CampusController();
+}
+elseif (isset($_GET['page'])  && $_GET['page'] === 'campusedit'){
+    $controller = new CampusEditController();
+}
+elseif (isset($_GET['page'])  && $_GET['page'] === 'campuscreate'){
+    $controller = new CampusCreateController();
 }
 
 $controller->render($_GET, $_POST);
