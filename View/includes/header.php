@@ -9,8 +9,9 @@
     <title><?php echo $page_title; ?></title>
     <link rel="shortcut icon" type="image/jpg" href="https://i.pinimg.com/originals/41/d9/2b/41d92bfeba7936768e399c305b60736a.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
 </head>
-<body>
+<body class="">
     <header>
         <?php echo "<h1>$page_title</h1>"; ?>
     </header>
