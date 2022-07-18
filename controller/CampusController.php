@@ -16,7 +16,13 @@ class CampusController
         //var_dump($newCampusName);
         //var_dump($newLocationName);
         }
+
+        if (isset($POST['remove'])){
+            $deleteCampus = $POST['remove'];
+            $campusData->deleteCampus($deleteCampus);
+        }
         $showAllCampus = $campusData->getCampus();
+
         require 'view/campusview.php';
     }
 
