@@ -134,7 +134,7 @@ Let's say we want to create a new campus, what do we need?
 #### STEP 1
 - We need a new function in our Model that will tell our database to create a new Campus.
 
-![function](images/sql_function.png)
+![flowchart](images/sql_function.png)
 
 - Our sql statement will insert a new name and location into our campus_table. We use 2 placeholders which will contain the input values.
 - $this->connect()->exec($sql), we first make a connection to the database and exec will execute our sql statement.
