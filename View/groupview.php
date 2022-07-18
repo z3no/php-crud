@@ -37,6 +37,7 @@ require 'View/includes/header.php';
             </tbody>
 
         </table>
+        <button type="submit" name="add" class="btn btn-success"><i class="bi bi-plus-square text-light"></i></button>
 
     </div>
 
